@@ -3,6 +3,19 @@ Creating CoolBox frames using YAML config file ready to be visualized by CoolBox
 
 This repository provides a set of functions to create [CoolBox](https://github.com/GangCaoLab/CoolBox) `coolbox.core.frame.frame.Frame` via a YAML config file.
 
+## Example use
+
+```python
+from coolboxvizard import create_frame
+frame = create_frame('config.yaml')
+frame.plot('chr12:1514617-1614617')
+```
+
+
+## Requirements
+- [CoolBox](https://github.com/GangCaoLab/CoolBox)
+- [PyYAML](https://pypi.org/project/PyYAML/)
+
 ## Config file example
 
 ```YAML
@@ -40,16 +53,4 @@ tracks:
 ```
 
 
-## Example use
-
-```python
-from coolboxvizard import create_frame
-frame = create_frame('config.yaml')
-frame.plot('chr12:1514617-1614617')
-```
-
-
-## Requirements
-- [CoolBox](https://github.com/GangCaoLab/CoolBox)
-- [PyYAML](https://pypi.org/project/PyYAML/)
 
