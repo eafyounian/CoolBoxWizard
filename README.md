@@ -8,7 +8,7 @@ This repository provides a set of functions to create [CoolBox](https://github.c
 ### Basic usage
 
 ```python
-from coolboxvizard import create_frame
+from coolboxwizard import create_frame
 frame = create_frame('config.yaml')
 frame.plot('chr12:1514617-1614617')
 ```
@@ -17,7 +17,7 @@ frame.plot('chr12:1514617-1614617')
 
 ```python
 from coolbox.api import HighLights
-from coolboxvizard import create_frame
+from coolboxwizard import create_frame
 
 regions= ['chr12:1534617-1564617']
 
@@ -33,7 +33,7 @@ frame.plot('chr12:1514617-1614617')
 
 ```python
 from coolbox.api import Vlines
-from coolboxvizard import create_frame
+from coolboxwizard import create_frame
 
 highlight_lines = [('chr12', 1534617), ('chr12', 1564617)]
 
