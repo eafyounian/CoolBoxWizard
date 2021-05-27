@@ -16,6 +16,9 @@ frame.plot('chr12:1514617-1614617')
 ### With highlighted regions
 
 ```python
+from coolbox.api import HighLights
+from coolboxvizard import create_frame
+
 regions= ['chr12:1534617-1564617']
 
 highlights = HighLights(regions, alpha=0.1, color='blue')
@@ -30,8 +33,11 @@ frame.plot('chr12:1514617-1614617')
 
 ```python
 from coolbox.api import Vlines
+from coolboxvizard import create_frame
 
 highlight_lines = [('chr12', 1534617), ('chr12', 1564617)]
+
+frame = create_frame('config.yaml')
 frame = frame * Vlines(highlight_lines, line_width=1.5, alpha=0.25, color='green')
 frame.plot('chr12:1514617-1614617')
 ```
