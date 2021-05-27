@@ -10,6 +10,7 @@ load_functions = {'BED': cbx.BED,
                    'Arcs': cbx.Arcs,
                    'BigWig': cbx.BigWig,
                    'GTF': cbx.GTF,
+                   ## TODO ADD MORE FUNCTIONS...
                   }
 
 def load_config(file: str) -> dict:
