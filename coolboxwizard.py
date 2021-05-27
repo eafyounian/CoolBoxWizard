@@ -10,6 +10,7 @@ load_functions = {'BED': cbx.BED,
                    'Arcs': cbx.Arcs,
                    'BigWig': cbx.BigWig,
                    'GTF': cbx.GTF,
+                   'BedGraph': cbx.BedGraph,
                    ## TODO ADD MORE FUNCTIONS...
                   }
 
