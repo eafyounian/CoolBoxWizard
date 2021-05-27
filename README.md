@@ -3,7 +3,9 @@ Creating CoolBox frames using YAML config file ready to be visualized by CoolBox
 
 This repository provides a set of functions to create [CoolBox](https://github.com/GangCaoLab/CoolBox) `coolbox.core.frame.frame.Frame` via a YAML config file.
 
-## Example use
+## Example usages
+
+### Basic usage
 
 ```python
 from coolboxvizard import create_frame
@@ -11,6 +13,41 @@ frame = create_frame('config.yaml')
 frame.plot('chr12:1514617-1614617')
 ```
 
+### With highlighted regions
+
+```python
+regions= ['chr12:1534617-1564617']
+
+highlights = HighLights(regions, alpha=0.1, color='blue')
+
+with highlights:
+     frame = create_frame('config.yaml')
+        
+frame.plot('chr12:1514617-1614617')
+```
+
+### With vertical lines
+
+```python
+from coolbox.api import Vlines
+
+highlight_lines = [('chr12', 1534617), ('chr12', 1564617)]
+frame = frame * Vlines(highlight_lines, line_width=1.5, alpha=0.25, color='green')
+frame.plot('chr12:1514617-1614617')
+```
+
+### Using CoolBox Browser
+```python
+from coolbox.api import Browser
+
+bsr = Browser(frame, 
+              reference_genome='hg38', 
+              widgets_box='simple',
+            )
+
+bsr.show('chr12:1514617-1614617')
+bsr.save('test.png')
+```
 
 ## Requirements
 - [CoolBox](https://github.com/GangCaoLab/CoolBox)
